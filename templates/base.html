@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    {% include 'parciais/_head.html' %}
+    <title>{% block titulo %}{% endblock %}E-commerce</title>
+</head>
+
+<body>
+    {% include 'parciais/_nav.html' %}
+    {% if not request.user.is_authenticated %}
+        {% include 'parciais/_modal.html' %}
+    {% endif %}
+    
+    {% include 'parciais/_menu.html' %}
+
+    <main class="flex">
+        {% include 'parciais/_messages.html' %}
+        {% block conteudo %}{% endblock %}
+    </main>
+
+    {% include 'parciais/_footer.html' %}
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block titulo %}Feed | {% endblock %}
+
+{% block conteudo %}
+    {% for post in posts %}
+        <div class="flex flex-col items-center gap-5">
+            <h2 class="card-title">{{ post.autor }}</h5>
+            <p class="card-text">{{ post.data_postagem }}</p>
+            <p class="card-text">{{ post.legenda }}</p>
+            {% if post.imagem %}
+                <a href="{% url 'post:feed' %}">
+                    <img class="w-96" src="{{ post.imagem.url }}" alt="{{ post.legenda }}">
+                </a>
+            {% endif %}
+            <p class="card-text">{{ post.reacao }} reações</p>
+            <div class="card-body">
+                {% for comentario in post.comentario.all %}
+                    <p class="card-text">{{ comentario.texto }}</p>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+{% endblock conteudo %}

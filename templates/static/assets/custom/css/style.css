@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*,
+*::after,
+*::before {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Montserrat', sans-serif;
+}
+
+.product-price-block {
+    font-size: 1.5rem;
+}
+
+.product-price {
+    font-size: 1.5rem;
+}
+
+.product-old-price {
+    text-decoration: line-through;
+    font-size: 1rem;
+}
+
+.border-top-light-custom{
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+@media (min-width: 34em) {
+    .card-columns {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media (min-width: 62em) {
+    .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+}
+
+ul.errorlist  {
+    list-style-type: none;
+    margin: 5px 0;
+    padding: 0;
+    font-size: 13px;
+    color: red;
+    display: block;
+}
+
+ul.errorlist li {
+    display: block;
+    font-weight: bold;
+}
+
+/*
+@media (min-width: 48em) {
+    .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+}
+
+
+@media (min-width: 62em) {
+    .card-columns {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+    }
+}
+
+@media (min-width: 75em) {
+    .card-columns {
+        -webkit-column-count: 5;
+        -moz-column-count: 5;
+        column-count: 5;
+    }
+}
+*/
+.form-group textarea {
+    width: 100%;
+}
+.nav-cart, .nav-cart a {
+    color: #fff;
+    text-decoration: none;
+}
+.cart-img {
+    max-width: 150px;
+}
+
+/* ------  novo codigo css -------*/
+
+::backdrop{
+    display: flex;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, .3);
+  }
+
+  
+  .botaoMenu {
+    transition: 0.3s;
+  }
+  
+  .botaoMenu:hover {
+    transition: .3s;
+    background: linear-gradient(rgb(110, 160, 255) 0px, rgb(81, 141, 255) 100%);
+    box-shadow: rgba(50, 113, 230, 0.5) 0px 3px 9px;
+    transform: rotate(180deg);
+  }
+  
+  .botaoOrcamento {
+    transition: .3s;
+  }
+  
+  .botaoEntrar, .botaoOrcamento:hover {
+    transition: .3s;
+    background: linear-gradient(rgb(110, 160, 255) 0px, rgb(81, 141, 255) 100%);
+    box-shadow: rgba(50, 113, 230, 0.5) 0px 3px 9px;
+  }
+  
+  .botaoConta {
+    transition: all .15s ease-in-out;
+  }
+  
+  .botaoConta:hover {
+    transform: scale(1.1, 1.1);
+  }
+  
+  /* .logoElementor{
+    background-color: #AB003A;
+  } */
+  
+  /* .logoFigma {
+    background-color: #30303C;
+  } */
+  
+  h1.h1TituloLogin {
+    font-family: 'Montserrat Alternates', sans-serif;
+  }
+  
+    .botaoEntrar:hover {
+      background: linear-gradient(rgb(110, 160, 255) 0px, rgb(81, 141, 255) 100%);
+      box-shadow: rgba(50, 113, 230, 0.5) 0px 3px 9px;
+    }
+  
+    .modalConta{
+      top: 20%;
+      bottom: 20%;
+      right: 30%;
+      left: 30%;
+  
+    }
+  
+    dialog#modalMenu::backdrop{
+      top: 69px;
+    }
+    div#modalMenu{
+      transition: 300ms linear;
+  
+    }
+    div#modalMenu:hover{
+      transition: 500ms linear;
+  
+    }
+  
+    #modalMenu{
+      border-radius: 12px 12px 0 0;
+  
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+    
+    .menu-container {
+      display: flex;
+    }
+    
+    .sidebar {
+      height: 100vh;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+    
+    .sidebar a {
+      padding: 15px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    .sidebar a:hover {
+      color: #f1f1f1;
+    }
+    
+    .toggle-btn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: #111;
+      color: white;
+      border: none;
+      padding: 15px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    
+    .content {
+      padding: 16px;
+      flex-grow: 1;
+    }
+    
+    @media screen and (max-height: 450px) {
+      .sidebar {padding-top: 15px;}
+      .sidebar a {font-size: 18px;}
+    }
+    
